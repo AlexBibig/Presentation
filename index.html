@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section><h1>What is React.js?</h1></section>
+        <section>
+          <h2>What is React.js?</h2>
+          <ul>
+            <li>
+              React is a view layer library, not a framework like
+              Backbone, Angular etc.
+            </li>
+            <li>
+              You can't use React to build a fully-functional web app
+            </li>
+            <li>Developed by Facebook</li>
+            <li>
+              React used by: Facebook, Instagram, Netflix, Reddit,
+              Airbnb and etc.
+            </li>
+          </ul>
+        </section>
+
+        <section><h1>Why was React developed?</h1></section>
+        <section>
+          <h2>Why was React developed?</h2>
+          <ul>
+            <li>Complexity of two-way data binding</li>
+            <li>Bad UX from using "cascading updates" of DOM tree</li>
+            <li>A lot of data on a page changing over time</li>
+            <li>Complexity of Facebook's UI architecture</li>
+          </ul>
+        </section>
+
+        <section><h1>React advantages</h1></section>
+        <section>
+          <h2>React advantages</h2>
+          <ul>
+            <li>Easy to mix HTML and JS</li>
+            <li>Easy to understand what a component will render</li>
+            <li>Uses full power of JS</li>
+            <li>
+              React is fast! Using virtual DOM objects enables fast
+              batch updates to real DOM, with great productivity gains
+              over cascading updates of DOM tree
+            </li>
+            <li>No complex two-way data flow</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Fundamentals</h1>
+          <p>Most important terms in React</p>
+        </section>
+
+        <section><h1>JSX</h1></section>
+        <section>
+          <h2>JSX</h2>
+          <ul>
+            <li>One of the coolest things in React</li>
+            <li>XML-like syntax for generating component's HTML</li>
+            <li>Easier to read and understand large DOM trees</li>
+            <li>Translates to pure JavaScript using react-tools</li>
+            <img
+              src="./examples/assets/jsx_1.png"
+              alt="jsx-example"
+            />
+          </ul>
+        </section>
+
+        <section><h1>Virtual DOM</h1></section>
+        <section>
+          <h2>Virtual DOM</h2>
+          <ul>
+            <li>
+              The virtual DOM is used for efficient re-rendering of
+              the DOM
+            </li>
+            <li>
+              React aims to re-render the virtual tree only when the
+              state changes
+            </li>
+            <li>
+              Uses 2 virtual trees (new and previous) to find
+              differences and update real DOM
+            </li>
+            <li>
+              Does not update entire component in real DOM - only
+              computes a patch operation that updates part of the DOM
+            </li>
+          </ul>
+        </section>
+
+        <section><h1>Rendering an Element into the DOM</h1></section>
+        <section>
+          <h2>Rendering an Element into the DOM</h2>
+          <ul>
+            <li>
+              Applications built with just React usually have a single
+              root DOM node
+            </li>
+            <li>
+              To render a React element into a root DOM node, pass
+              both to ReactDOM.render()
+            </li>
+            <li>
+              Everything inside id "root" in your main HTML-file will
+              be managed by React DOM
+            </li>
+            <img
+              src="./examples/assets/rendering_elements_1.png"
+              alt="rendering-elements-example"
+            />
+          </ul>
+        </section>
+
+        <section><h1>Component</h1></section>
+        <section>
+          <h2>Component</h2>
+          <p>
+            Components are self-contained reusable building blocks of
+            web application. They describe your UI at any point in
+            time, just like a server-rendered app. The simplest way to
+            define a component is to write a JavaScript function, but
+            you can also use an ES6 class to define a component.
+          </p>
+        </section>
+        <section>
+          <h2>Class components</h2>
+          <ul>
+            <li>
+              To define a React component class, you need to extend
+              React.Component
+            </li>
+            <li>The only required method is render()</li>
+            <li>Inserted into DOM using ReactDOM.render()</li>
+            <img
+              src="./examples/assets/component_1.png"
+              alt="component-example"
+            />
+          </ul>
+        </section>
+        <section>
+          <h2>Functional components</h2>
+          <ul>
+            <li>
+              To define a React Functional component, you need to
+              write a JavaScript function
+            </li>
+            <li>The function must return React element</li>
+            <li>Inserted into DOM using ReactDOM.render()</li>
+            <img
+              src="./examples/assets/component_2.png"
+              alt="component-example"
+            />
+          </ul>
+        </section>
+
+        <section><h1>Props</h1></section>
+        <section>
+          <h2>Props</h2>
+          <ul>
+            <li>
+              Passed down to component from parent component and
+              represents data for the component
+            </li>
+            <li>in Class components access via this.props</li>
+            <img
+              src="./examples/assets/props_1.png"
+              alt="props-example"
+            />
+          </ul>
+        </section>
+
+        <section><h1>State</h1></section>
+        <section>
+          <h2>State</h2>
+          <ul>
+            <li>Represents internal state of the component</li>
+            <li>in Class components access via this.state</li>
+            <li>
+              When a component's state data changes, the markup will
+              be updated by re-invoking render() method
+            </li>
+            <li>For changing state use method setState()</li>
+            <img
+              src="./examples/assets/state_1.png"
+              alt="state-example"
+            />
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
